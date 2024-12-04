@@ -100,10 +100,14 @@ p {
     justify-content: space-between;
 }
 
+.scroll {
+    opacity: 0;
+}
 
-.fromBottom {
-    animation: 1.5s ease-out 1.2s 1 slideInBottom;
+.fromBottom2 {
+    animation: 2s ease-out 1.2s 1 slideInBottom;
     animation-delay: 0s;
+    opacity: 1;
 }
 
 .contentabout {
@@ -125,7 +129,7 @@ p {
 .row.aboutrowleft {
     width: 100%;
     display: flex;
-    gap:40px;
+    gap:1em;
     flex-direction: row;
     justify-content: flex-end;
 }
@@ -133,19 +137,19 @@ p {
 .row.aboutrowright {
     width: 100%;
     display: flex;
-    gap:40px;
+    gap:1em;
     flex-direction: row;
     justify-content: flex-start;
 }
 
 .aboutboxDescriptionRight {
-    border-radius: 20px;
+border-radius: 20px;
     border-color: #202030;
     justify-content: left;
     padding: 20px;
-    min-width: 40%;
-    max-width: 80%;
+    width: 40%;
     display: flex;
+    max-height: 250px;
     align-items: center;
     vertical-align: middle;
 }

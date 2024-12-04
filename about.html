@@ -71,31 +71,33 @@
                         </p>
                     </div>
                 </div>
-                <div class="row aboutrowleft">
+                <div class="row aboutrowleft scroll scroll1">
                     <div class="aboutboxDescriptionLeft">
-                        <h5>Banana</h5>
+                        <h5>First</h5>
                     </div>
                     <div class="aboutboxPhoto" style="background-image:  url(/assets/daniel_jumping.jpeg)">
                     </div>
-                <div class="row aboutrowright">
+                </div>
+                <div class="row aboutrowright scroll scroll2">
                     <div class="aboutboxPhoto" style="background-image:  url(/assets/daniel_jumping.jpeg)">
                     </div>
                     <div class="aboutboxDescriptionRight">
-                        <p>Banana</p>
+                        <h5 style="text">Second</h5>
                     </div>
-                <div class="row aboutrowleft">
+                </div>
+                <div class="row aboutrowleft scroll scroll3">
                     <div class="aboutboxDescriptionLeft">
-                        <p>Banana</p>
+                        <h5>Third</h5>
                     </div>
                     <div class="aboutboxPhoto" style="background-image:  url(/assets/daniel_jumping.jpeg)">
                     </div>
-                <div class="row aboutrowright">
+                </div>
+                <div class="row aboutrowright scroll scroll4">
                     <div class="aboutboxPhoto" style="background-image:  url(/assets/daniel_jumping.jpeg)">
                     </div>
                     <div class="aboutboxDescriptionRight">
-                        <p>Banana</p>
+                        <h5>Fourth</h5>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -110,6 +112,25 @@
                 </p>
             </div>
         </div>
-    </section>         
+    </section>
+    
+    <script>
+        // Create the observer
+        const observer = new IntersectionObserver(entries => {
+            // Loop over the entries
+            entries.forEach(entry => {
+            // If the element is visible
+                if (entry.isIntersecting) {
+                    // Add the animation class
+                    entry.target.classList.add('fromBottom2');
+                    return;
+                }
+            });
+        });
+        observer.observe(document.querySelector('.scroll1'));
+        observer.observe(document.querySelector('.scroll2'));
+        observer.observe(document.querySelector('.scroll3'));
+        observer.observe(document.querySelector('.scroll4'));
+    </script>
     </body>
 </html>
