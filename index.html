@@ -13,6 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
   </head>
   <body>
     <div class="navbar navbar-expand-lg">
@@ -88,7 +89,7 @@
             </div>
             <div class="row">
                 <div>
-                    <p>
+                    <p style="z-index: 10">
                         <br>
                         You've stumbled upon my tiny corner of the internet – congratulations to you for braving my first 'from scratch' site, the first I've worked on without A/B tests, purchase buttons, or templates.
                         <br><br> 
@@ -110,7 +111,7 @@
             </div>
         </div>
     </section>  
-    <section style="min-height: 400px; background:#202030">
+    <section style="min-height: 400px; background:#202030; z-index: 500">
         <div class="container ">
             
             
@@ -131,7 +132,16 @@
                     </div>
                     <div class="logoandtext bannerHover"  onclick="changeText()">
                         <div class= "logobanner bannertext">
-                            <p class="bannertext" id="bannerLateText">&#128073 arriving late</p>
+                            <p class="bannertext" id="bannerLateText">
+                                <span>
+                                    <lord-icon
+                                       src="/assets/tap_twice.json"
+                                       trigger="loop"
+                                       delay=5>
+                                    </lord-icon>
+                                </span>
+                                arriving late
+                            </p>
                         </div>
                         <!-- <p style="color:#FFE0DA00;">
                             Funny<br>
@@ -169,37 +179,41 @@
             /* console.log(x.innerHTML); 
             console.log(y.innerHTML); */
             
-            if  (y.innerHTML == 0){
-                x.innerHTML = "&#128073 arriving late";
+            if  (y.innerHTML == -1){
+                x.innerHTML = "arriving late";
+                console.log(y.innerHTML);
                 y.innerHTML = 1;
+                console.log(y.innerHTML);
+            }
+            else if (y.innerHTML == 0){
+                x.innerHTML = "to basically everything";
+                console.log(y.innerHTML);
+                y.innerHTML = 1;
+                console.log(y.innerHTML);
             }
             else if (y.innerHTML == 1){
-                x.innerHTML = "to basically everything";
+                x.innerHTML = "I'm working on it";
                 y.innerHTML = 2;
             }
             else if (y.innerHTML == 2){
-                x.innerHTML = "I'm working on it";
+                x.innerHTML = "it's a condition";
                 y.innerHTML = 3;
             }
             else if (y.innerHTML == 3){
-                x.innerHTML = "it's a condition";
+                x.innerHTML = "I actually love gCal";
                 y.innerHTML = 4;
             }
             else if (y.innerHTML == 4){
-                x.innerHTML = "I actually love gCal";
+                x.innerHTML = "I'm always present!";
                 y.innerHTML = 5;
             }
             else if (y.innerHTML == 5){
-                x.innerHTML = "I'm always present!";
+                x.innerHTML = "anyways";
                 y.innerHTML = 6;
             }
             else if (y.innerHTML == 6){
-                x.innerHTML = "anyways";
-                y.innerHTML = 7;
-            }
-            else if (y.innerHTML == 7){
                 x.innerHTML = "thanks for clicking along";
-                y.innerHTML = 0;
+                y.innerHTML = -1;
             }
             
         }

@@ -208,11 +208,13 @@ p {
 }
 
 .bannertext {
+    display: flex;
+    justify-content: center;
     color: white;
     font-family: var(--banner_font);
     font-size: 28px;
-    text-align: center;
-    
+    height: 32px;
+    gap: 8px
 }
 
 .logobanner {
@@ -231,7 +233,7 @@ p {
 }
 
 .bannerHover:hover {
-    cursor: help;
+    cursor: pointer;
 }
 
 .asseenonlogoscontainer{
