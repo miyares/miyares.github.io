@@ -31,6 +31,7 @@ h4 {
 
 h5 {
     font-family: var(--header_font);
+    margin-bottom: 0px;
 }
 
 h6 {
@@ -130,24 +131,26 @@ p {
     width: 100%;
     display: flex;
     gap:1em;
+    padding: 0px;
     flex-direction: row;
     justify-content: flex-end;
+    align-content: center;
 }
 
 .row.aboutrowright {
     width: 100%;
     display: flex;
     gap:1em;
+    padding: 0px;
     flex-direction: row;
     justify-content: flex-start;
+    align-content: center;
 }
 
 .aboutboxDescriptionRight {
-border-radius: 20px;
-    border-color: #202030;
     justify-content: left;
-    padding: 20px;
-    width: 40%;
+    padding: 2vw;
+    width: 43vw;
     display: flex;
     max-height: 250px;
     align-items: center;
@@ -155,27 +158,44 @@ border-radius: 20px;
 }
 
 .aboutboxDescriptionLeft {
-    border-radius: 20px;
-    border-color: #202030;
     justify-content: right;
-    padding: 20px;
-    width: 40%;
+    padding: 2vw;
+    width: 43vw;
     display: flex;
     max-height: 250px;
     align-items: center;
     vertical-align: middle;
+    text-align: right;
+}
+
+.aboutSection {
+    padding-bottom: 96px;
+    background-size: 100% 100%;
+    background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+    background-image: radial-gradient(18% 28% at 24% 50%, #CEFAFFFF 7%, #073AFF00 100%),linear-gradient(0deg, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(70% 53% at 36% 76%, #73F2FFFF 0%, #073AFF00 100%),radial-gradient(42% 53% at 15% 94%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(42% 53% at 34% 72%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%),radial-gradient(21% 37% at 72% 23%, #D3FF6D9C 24%, #073AFF00 100%),radial-gradient(35% 56% at 91% 74%, #8A4FFFF5 9%, #073AFF00 100%),radial-gradient(74% 86% at 67% 38%, #6DFFAEF5 24%, #073AFF00 100%),linear-gradient(125deg, #4EB5FFFF 1%, #4C00FCFF 100%);
 }
 
 .aboutboxPhoto {
+    display: flex;
     border-radius: 50%;
-    vertical-align: middle;
     max-width: 12vw;
+    max-height: 12vw;
     aspect-ratio: 1;
     min-width: 100px;
     min-height: 100px;
-    display: inline-block;
     background-size: cover;
     background-position: center;
+}
+
+.aboutPhotoWrapper {
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    width: 12vw;
+    min-width: 100px;
+    min-height: 100px;
 }
 
 .content {
