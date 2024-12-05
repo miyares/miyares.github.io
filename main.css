@@ -293,9 +293,27 @@ p {
     text-decoration: none;
 }
 
+.button.tertiary {
+    font-family: var(--header_font);
+    border: var(--accent_color_2) 2px solid;
+    background-color: var(--accent_color_2);
+    color: var(--accent_color);
+    padding: 10px 18px;
+    border-radius: 80px;
+    text-decoration: none;
+    text-align: center;
+    width: auto;
+}
+
 .button.secondary:hover{
     background-color: var(--accent_color_2);
     color: var(--accent_color);
+    transition: ease-in-out .5s ;
+}
+
+.button.tertiary:hover{
+    background-color: transparent;
+    color: var(--accent_color_2);
     transition: ease-in-out .5s ;
 }
 .button.navbutton {
